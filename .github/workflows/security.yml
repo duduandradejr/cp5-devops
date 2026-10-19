@@ -22,4 +22,4 @@ jobs:
       - name: Rodar Semgrep
         uses: returntocorp/semgrep-action@v1
         with:
-          config: "p/default"
+          config: "auto"
