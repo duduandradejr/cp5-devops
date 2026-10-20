@@ -1,0 +1,7 @@
+rules:
+  - id: bloqueia-eval
+    message: "Vulnerabilidade Crítica: Uso de eval() detetado e bloqueado pelo pipeline!"
+    severity: ERROR
+    languages:
+      - javascript
+    pattern: eval(...)
