@@ -1,7 +1,7 @@
-var express = require('express');
-var app = express();
+const awsAccessKey = "AKIA1234567890ABCDEF";
+const awsSecretKey = "abc123DEF456ghi789jkl012mno345pqr678stu9";
 
-app.get('/executar', function(req, res) {
-    var entrada = req.query.codigo;
-    eval(entrada); // Vulnerabilidade crítica de injeção de código
-});
+// 2. Prova do Semgrep: Função eval recebendo uma variável externa real
+function rodarCodigo(entradaDoUsuario) {
+    eval(entradaDoUsuario);
+}
