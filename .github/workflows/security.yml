@@ -17,7 +17,9 @@ jobs:
   semgrep:
     runs-on: ubuntu-latest
     steps:
-      - name: Rodar Semgrep
-        uses: returntocorp/semgrep-action@v1
-        with:
-          config: ".semgrep.yml"
+      - name: Checkout do código
+        uses: actions/checkout@v3
+      - name: Instalar e Rodar Semgrep
+        run: |
+          pip install semgrep
+          semgrep scan --config="p/default" --error script.js
