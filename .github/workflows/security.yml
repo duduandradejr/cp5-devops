@@ -17,9 +17,7 @@ jobs:
   semgrep:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
       - name: Rodar Semgrep
         uses: returntocorp/semgrep-action@v1
         with:
-          config: "auto"
+          config: "p/default"

@@ -1,7 +1,8 @@
-const awsAccessKey = "AKIA1234567890ABCDEF";
-const awsSecretKey = "abc123DEF456ghi789jkl012mno345pqr678stu9";
+const express = require('express');
+const app = express();
 
-// 2. Prova do Semgrep: Função eval recebendo uma variável externa real
-function rodarCodigo(entradaDoUsuario) {
-    eval(entradaDoUsuario);
-}
+app.post('/executar', (req, res) => {
+    const codigoDoUtilizador = req.body.codigo;
+    
+    eval(codigoDoUtilizador); 
+});
